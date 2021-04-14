@@ -52,7 +52,7 @@ public class Main {
 
         for (int i = 0; i < cells.length; i++) {
             for (int j = 0; j < cells[0].length; j++) {
-                int field = logic.getField(i, j);
+                int field = logic.getField(j, i);
 
                 cells[i][j].setBackground(Color.darkGray);
                 cells[i][j].setForeground(Color.white);
@@ -60,10 +60,10 @@ public class Main {
                 if (field == 0) {
                     cells[i][j].setText("");
                 } else if (field == 1) {
-                    cells[i][j].setBackground(Color.white);
+                    cells[i][j].setBackground(Color.WHITE);
                     cells[i][j].setForeground(Color.darkGray);
 
-                    int bombCount = logic.getAdjacentBombCount(i, j);
+                    int bombCount = logic.getAdjacentBombCount(j, i);
                     if (bombCount > 0) {
                         cells[i][j].setForeground(new Color(bombCount / 8f, 0, 0));
                         cells[i][j].setText(bombCount + "");

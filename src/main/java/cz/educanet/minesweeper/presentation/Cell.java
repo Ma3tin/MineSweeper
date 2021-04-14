@@ -12,8 +12,8 @@ public class Cell extends JButton {
 
     public Cell() {
         setBackground(Color.darkGray);
-        setForeground(Color.white);
-        setFont(new Font("Arial", Font.PLAIN, 12));
+        setForeground(Color.pink);
+        setFont(new Font("Segoe UI Emoji", Font.PLAIN, 12));
         setMargin(new Insets(0, 0, 0, 0));
 
         addMouseListener(new MouseListener() {
